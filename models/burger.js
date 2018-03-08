@@ -15,6 +15,16 @@ var burger = {
       orm.updateOne("burgers", updateId,  function(res) {
         cb(res);
       });
+    },
+    throwUp: function(updateId, cb) {
+      orm.throwUp("burgers", updateId,  function(res) {
+        cb(res);
+      });
+    },
+    delete: function(updateId, cb) {
+      orm.deleteOne("burgers", updateId,  function(res) {
+        cb(res);
+      });
     }
 }
 

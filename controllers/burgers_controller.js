@@ -32,6 +32,24 @@ router.put("/api/eatBurger", function(req, res) {
   });
 });
 
+router.put("/api/throwUpBurger", function(req, res) {
+  console.log(req.body)
+  burger.throwUp(req.body.updateId, function(result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
+
+router.delete("/api/deleteBurger", function(req, res) {
+  console.log(req.body)
+  burger.delete(req.body.updateId, function(result) {
+    res.json({ id: 1 })
+  });
+});
 
 
 

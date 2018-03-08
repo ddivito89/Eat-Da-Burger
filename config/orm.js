@@ -26,7 +26,21 @@ var orm = {
         if (err) throw err;
         cb(result);
       });
-  }
+  },
+  throwUp: function(tableInput, updateId, cb) {
+      var queryString = "UPDATE " + tableInput + " SET devoured = 0 where id = " + updateId + ";";
+      connection.query(queryString, function(err, result) {
+        if (err) throw err;
+        cb(result);
+      });
+  },
+  deleteOne: function(tableInput, updateId, cb) {
+      var queryString = "DELETE FROM " + tableInput + " where id = " + updateId + ";";
+      connection.query(queryString, function(err, result) {
+        if (err) throw err;
+        cb(result);
+      });
+  },
 }
 
 module.exports = orm;
