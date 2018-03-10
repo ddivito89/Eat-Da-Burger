@@ -1,14 +1,15 @@
 body {
   background-color: gold;
-  margin-bottom: 100px;
 }
 
 li {
-  padding: 5px;
-  margin: 5px;
-  width: 100%;
   border: 1px solid black;
   background-color: lightgrey;
+  margin-right:30px;
+  margin-bottom:5px;
+  text-align: left;
+  height:40px;
+  padding:3px;
 }
 
 ul {
@@ -16,7 +17,6 @@ ul {
 }
 
 button {
-  list-style-type: none;
   background-color: orange;
 }
 
@@ -25,9 +25,15 @@ input {
 }
 
 .list-item {
-  width: 250px;
-  display: inline-block
+  display: inline-block;
+
 }
+
+.burger-btn{
+  text-align: right;
+}
+
+
 
 .burger_img {
   height: 200px;
