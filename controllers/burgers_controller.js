@@ -51,8 +51,4 @@ router.delete("/api/deleteBurger", function(req, res) {
   });
 });
 
-
-
-
-
 module.exports = router;
